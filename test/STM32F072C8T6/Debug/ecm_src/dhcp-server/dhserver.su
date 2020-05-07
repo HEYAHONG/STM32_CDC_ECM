@@ -1,0 +1,12 @@
+dhserver.c:99:17:get_ip	24	static
+dhserver.c:106:13:set_ip	16	static
+dhserver.c:111:22:entry_by_ip	24	static
+dhserver.c:120:22:entry_by_mac	24	static
+dhserver.c:129:22:is_vacant	16	static
+dhserver.c:134:22:vacant_address	16	static
+dhserver.c:143:22:free_entry	16	static
+dhserver.c:148:10:find_dhcp_option	32	static
+dhserver.c:162:5:fill_options	32	static
+dhserver.c:230:13:udp_recv_proc	80	static
+dhserver.c:320:7:dhserv_init	32	static
+dhserver.c:339:6:dhserv_free	8	static

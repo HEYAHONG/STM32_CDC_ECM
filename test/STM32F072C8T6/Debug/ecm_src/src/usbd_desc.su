@@ -1,0 +1,6 @@
+usbd_desc.c:130:17:USBD_VCP_DeviceDescriptor	16	static
+usbd_desc.c:142:17:USBD_VCP_LangIDStrDescriptor	16	static
+usbd_desc.c:154:17:USBD_VCP_ProductStrDescriptor	16	static
+usbd_desc.c:166:17:USBD_VCP_ManufacturerStrDescriptor	16	static
+usbd_desc.c:178:17:USBD_VCP_SerialStrDescriptor	24	static
+usbd_desc.c:204:13:IntToUnicode	32	static

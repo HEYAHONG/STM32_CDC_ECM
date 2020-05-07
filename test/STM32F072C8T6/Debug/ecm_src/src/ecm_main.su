@@ -1,0 +1,11 @@
+ecm_main.c:27:6:usb_ecm_recv_callback	16	static
+ecm_main.c:43:10:sys_now	8	static
+ecm_main.c:48:1:tcp_timer_proc	16	static
+ecm_main.c:53:7:output_fn	24	static
+ecm_main.c:58:7:linkoutput_fn	24	static
+ecm_main.c:72:7:netif_init_cb	16	static
+ecm_main.c:87:13:init_lwip	40	static
+ecm_main.c:102:6:dns_query_proc	16	static
+ecm_main.c:181:13:service_traffic	16	static,ignoring_inline_asm
+ecm_main.c:202:6:ecm_main_init	8	static
+ecm_main.c:218:6:ecm_main_loop	8	static
