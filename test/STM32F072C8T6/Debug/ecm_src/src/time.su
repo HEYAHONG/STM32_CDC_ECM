@@ -1,9 +1,0 @@
-time.c:34:6:time_init	8	static
-time.c:48:10:mtime	8	static
-time.c:67:6:msleep	24	static
-time.c:80:6:stmr	24	static
-time.c:103:6:stmr_init	16	static
-time.c:114:6:stmr_add	16	static
-time.c:120:6:stmr_free	24	static
-time.c:147:6:stmr_stop	16	static
-time.c:152:6:stmr_run	16	static

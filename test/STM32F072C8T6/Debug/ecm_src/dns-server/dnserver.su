@@ -1,5 +1,0 @@
-dnserver.c:86:17:get_uint16	32	static
-dnserver.c:93:12:parse_next_query	48	static
-dnserver.c:133:13:udp_recv_proc	56	static
-dnserver.c:174:7:dnserv_init	40	static
-dnserver.c:193:6:dnserv_free	8	static
