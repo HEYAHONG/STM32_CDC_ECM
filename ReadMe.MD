@@ -32,4 +32,8 @@
 
 ![](doc/ecm_dns.png)
 
-* HTTP由于存储空间不足无法编译测试。
+* 最初HTTP由于存储空间不足无法编译测试。调小ECM分片大小和调大flash设置为128K时可启用,但对STM32F072C8T6而言，此操作为临时方案。
+
+![](doc/ecm_http.gif)
+
+虽然在终端中使用curl和elinks均可正常访问，但是使用firefox时出现connection reset错误，无法正常显示页面。

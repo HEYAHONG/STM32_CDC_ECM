@@ -25,6 +25,8 @@
 "Drivers/STM32F0xx_HAL_Driver/Src/stm32f0xx_ll_usb.o"
 "ecm_src/dhcp-server/dhserver.o"
 "ecm_src/dns-server/dnserver.o"
+"ecm_src/lwip-1.4.1/apps/httpserver_raw/fs.o"
+"ecm_src/lwip-1.4.1/apps/httpserver_raw/httpd.o"
 "ecm_src/lwip-1.4.1/src/core/def.o"
 "ecm_src/lwip-1.4.1/src/core/dhcp.o"
 "ecm_src/lwip-1.4.1/src/core/dns.o"

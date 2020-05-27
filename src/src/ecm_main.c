@@ -1,4 +1,6 @@
 #include "usb_device.h"
+#include "httpd.h"
+
 static struct netif netif_data;
 static uint8_t hwaddr[6]  = {0x20,0x89,0x84,0x6A,0x96,0x00};
 static uint8_t ipaddr[4]  = {192, 168, 7, 1};
@@ -110,7 +112,7 @@ bool dns_query_proc(const char *name, ip_addr_t *addr)
 }
 
 
-/*
+
 const char *state_cgi_handler(int index, int n_params, char *params[], char *values[])
 {
     return "/state.shtml";
@@ -132,51 +134,49 @@ const char *ctl_cgi_handler(int index, int n_params, char *params[], char *value
 
     return "/state.shtml";
 }
-*/
 
-// static const char *ssi_tags_table[] =
-// {
-//    "systick", /* 0 */
-//   "alpha",   /* 1 */
-//    "bravo",   /* 2 */
-//    "charlie"  /* 3 */
-//};
 
-/*
+ static const char *ssi_tags_table[] =
+ {
+    "systick", /* 0 */
+   "alpha",   /* 1 */
+    "bravo",   /* 2 */
+    "charlie"  /* 3 */
+};
+
 static const tCGI cgi_uri_table[] =
 {
     { "/state.cgi", state_cgi_handler },
     { "/ctl.cgi",   ctl_cgi_handler },
 };
-*/
 
-//static u16_t ssi_handler(int index, char *insert, int ins_len)
-//{
- //   int res;
+static u16_t ssi_handler(int index, char *insert, int ins_len)
+{
+    int res;
 
- //   if (ins_len < 32) return 0;
+    if (ins_len < 32) return 0;
 
-//    switch (index)
-//    {
-//    case 0: /* systick */
-//        res = snprintf(insert, ins_len, "%u", (unsigned)mtime());
-//        break;
-//    case 1: /* alpha */
-//        *insert = '0' + (alpha & 1);
-//        res = 1;
-//        break;
-//    case 2: /* bravo */
-//        *insert = '0' + (bravo & 1);
-//        res = 1;
-//        break;
-//    case 3: /* charlie */
-//        *insert = '0' + (charlie & 1);
-//        res = 1;
-//        break;
-//    }
+    switch (index)
+    {
+    case 0: /* systick */
+        res = snprintf(insert, ins_len, "%u", (unsigned)mtime());
+        break;
+    case 1: /* alpha */
+        *insert = '0' + (alpha & 1);
+        res = 1;
+        break;
+    case 2: /* bravo */
+        *insert = '0' + (bravo & 1);
+        res = 1;
+        break;
+    case 3: /* charlie */
+        *insert = '0' + (charlie & 1);
+        res = 1;
+        break;
+    }
 
-//    return res;
-//}
+    return res;
+}
 
 static void service_traffic(void)
 {
@@ -210,9 +210,9 @@ void ecm_main_init()
 
 	  while (dnserv_init(PADDR(ipaddr), 53, dns_query_proc) != ERR_OK);
 
-	  //http_set_cgi_handlers(cgi_uri_table, sizeof(cgi_uri_table) / sizeof(*cgi_uri_table));
-	  //http_set_ssi_handler(ssi_handler, ssi_tags_table, sizeof(ssi_tags_table) / sizeof(*ssi_tags_table));
-	 // httpd_init();
+	  http_set_cgi_handlers(cgi_uri_table, sizeof(cgi_uri_table) / sizeof(*cgi_uri_table));
+	  http_set_ssi_handler(ssi_handler, ssi_tags_table, sizeof(ssi_tags_table) / sizeof(*ssi_tags_table));
+	  httpd_init();
 }
 
 void ecm_main_loop()

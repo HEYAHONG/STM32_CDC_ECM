@@ -6,7 +6,7 @@
 * lwip-1.4.1/src/include/ipv4
 * dhcp-server
 * dns-server
-* lwip-1.4.1/apps/httpserver_raw(由于存储空间不足未启用)
+* lwip-1.4.1/apps/httpserver_raw(由于存储空间不足未启用，调小ECM分片大小和调大flash设置为128K时可启用)
 
 ## 源代码文件（相对于当前目录）
 
@@ -53,6 +53,5 @@
 
 *  dns-server/dnserver.c
 
-*  lwip-1.4.1/apps/httpserver_raw/fs.c(由于存储空间不足未启用)
-*  lwip-1.4.1/apps/httpserver_raw/httpd.c(由于存储空间不足未启用)
-*  lwip-1.4.1/apps/httpserver_raw/fsdata.c(由于存储空间不足未启用)
+*  lwip-1.4.1/apps/httpserver_raw/fs.c(由于存储空间不足未启用，调小ECM分片大小和调大flash设置为128K时可启用)
+*  lwip-1.4.1/apps/httpserver_raw/httpd.c(由于存储空间不足未启用，调小ECM分片大小和调大flash设置为128K时可启用)

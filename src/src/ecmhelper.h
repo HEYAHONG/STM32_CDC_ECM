@@ -31,7 +31,7 @@
 
 //#define ECM_MAX_SEGMENT_SIZE           1514
 //调小以编译通过
-#define ECM_MAX_SEGMENT_SIZE           514
+#define ECM_MAX_SEGMENT_SIZE           270
 struct ecm_interface
 {
   struct interface_descriptor             ctl_interface;

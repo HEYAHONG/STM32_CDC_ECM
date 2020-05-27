@@ -22,6 +22,7 @@ Core/Startup \
 Drivers/STM32F0xx_HAL_Driver/Src \
 ecm_src/dhcp-server \
 ecm_src/dns-server \
+ecm_src/lwip-1.4.1/apps/httpserver_raw \
 ecm_src/lwip-1.4.1/src/core \
 ecm_src/lwip-1.4.1/src/core/ipv4 \
 ecm_src/lwip-1.4.1/src/netif \

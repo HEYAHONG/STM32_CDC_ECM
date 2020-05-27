@@ -12,6 +12,7 @@ RM := rm -rf
 -include ecm_src/lwip-1.4.1/src/netif/subdir.mk
 -include ecm_src/lwip-1.4.1/src/core/ipv4/subdir.mk
 -include ecm_src/lwip-1.4.1/src/core/subdir.mk
+-include ecm_src/lwip-1.4.1/apps/httpserver_raw/subdir.mk
 -include ecm_src/dns-server/subdir.mk
 -include ecm_src/dhcp-server/subdir.mk
 -include Drivers/STM32F0xx_HAL_Driver/Src/subdir.mk
